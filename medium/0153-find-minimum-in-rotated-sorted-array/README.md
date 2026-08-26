@@ -52,9 +52,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.9 MB (beats 38.09%)  
-**Submitted:** 2026-08-26T10:28:37.996Z  
+**Runtime:** 0 ms  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-08-26T10:28:04.646Z  
 
 ```java
 class Solution {
@@ -65,7 +65,7 @@ class Solution {
         while(low<high){
             int mid = low + (high - low) /2;
 
-            if(nums[mid]> nums[high]){
+            if(nums[low]> nums[high]){
                 low = mid + 1;
             }else{
                 high = mid;
