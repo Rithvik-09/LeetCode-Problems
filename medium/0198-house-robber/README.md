@@ -36,25 +36,10 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-26T06:49:31.684Z  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-08-26T06:49:43.054Z  
 
 ```java
-class Solution {
-    public int theft(int ind,int[] nums,int[] dp){
-        if(ind == 0){
-            return nums[0];
-        }
-
-        if(ind < 0){
-            return 0;
-        }
-
-        if(dp[ind] != -1){
-            return dp[ind];
-        }
-
-        int pick = nums[ind] + theft(ind - 2,nums,dp);
         int notpick = theft(ind -1,nums,dp);
         return dp[ind] = Math.max(pick,notpick);
     }
