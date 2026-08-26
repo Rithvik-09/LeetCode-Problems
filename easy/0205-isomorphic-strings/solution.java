@@ -8,7 +8,7 @@
             }
 
             sm[a] = i+1;
-            sm[b] = i+1;
+            tm[b] = i+1;
         }
     }
         return true;
