@@ -27,26 +27,29 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-26T09:58:30.877Z  
+**Runtime:** 1534 ms (beats 21.29%)  
+**Memory:** 48.4 MB (beats 87.42%)  
+**Submitted:** 2026-08-26T09:58:55.350Z  
 
 ```java
-        for(int i = 0;i<n;i++){
-            for(int j = i;j<n;j++){
-                sum += nums[j];
-            }
+class Solution {
+    public int subarraySum(int[] nums, int k) {
+        int n = nums.length;
+        int count =0;
 
-            int sum = 0;
+        for(int i = 0;i<n;i++){
+            int sum = 0;
+            for(int j = i;j<n;j++){
+                sum += nums[j];
 
-                if(sum == k){
-                    count++;
-                }
-        }
-    }
-        return count;
+                if(sum == k){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
 }
-
 ```
 
 ---
