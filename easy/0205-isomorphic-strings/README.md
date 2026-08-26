@@ -59,26 +59,30 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-26T10:39:01.691Z  
+**Runtime:** 5 ms (beats 98.72%)  
+**Memory:** 44.2 MB (beats 15.40%)  
+**Submitted:** 2026-08-26T10:39:11.001Z  
 
 ```java
+class Solution {
+    public boolean isIsomorphic(String s, String t) {
+        int[] sm = new int[256];
+        int[] tm = new int[256];
 
-        for(int i = 0;i<s.length();i++){
-            char a = s.charAt(i);
-            char b = t.charAt(i);
+        for(int i = 0;i<s.length();i++){
+            char a = s.charAt(i);
+            char b = t.charAt(i);
 
-            if(sm[a] != tm[b]){
-                return false;
-            }
+            if(sm[a] != tm[b]){
+                return false;
+            }
 
-            sm[a] = i+1;
-            tm[b] = i+1;
-        }
-    }
-        return true;
-
+            sm[a] = i+1;
+            tm[b] = i+1;
+        }
+        return true;
+    }
+}
 ```
 
 ---
