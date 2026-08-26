@@ -53,15 +53,15 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-26T10:26:42.208Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-08-26T10:27:27.558Z  
 
 ```java
         while(low<high){
             int mid = low + (high - low) /2;
         }
 
-            if(nums[low]> nums[mid]){
+            if(nums[low]> nums[high]){
                 low = mid + 1;
             }else{
                 high = mid;
@@ -69,8 +69,9 @@ Constraints:
 
         int high = nums.length-1;
 
-        return nums[low];
-    }
+        int low = 0;
+    public int findMin(int[] nums) {
+class Solution {
 
 ```
 
