@@ -35,22 +35,36 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-08-26T06:49:43.054Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.6 MB (beats 75.34%)  
+**Submitted:** 2026-08-26T06:49:48.939Z  
 
 ```java
-        int notpick = theft(ind -1,nums,dp);
-        return dp[ind] = Math.max(pick,notpick);
-    }
-    public int rob(int[] nums) {
-        int n = nums.length;
-        int[] dp = new int[n];
-        Arrays.fill(dp,-1);
-        return theft(n-1,nums,dp);
-    }
-}
+class Solution {
+    public int theft(int ind,int[] nums,int[] dp){
+        if(ind == 0){
+            return nums[0];
+        }
 
+        if(ind < 0){
+            return 0;
+        }
+
+        if(dp[ind] != -1){
+            return dp[ind];
+        }
+
+        int pick = nums[ind] + theft(ind - 2,nums,dp);
+        int notpick = theft(ind -1,nums,dp);
+        return dp[ind] = Math.max(pick,notpick);
+    }
+    public int rob(int[] nums) {
+        int n = nums.length;
+        int[] dp = new int[n];
+        Arrays.fill(dp,-1);
+        return theft(n-1,nums,dp);
+    }
+}
 ```
 
 ---
