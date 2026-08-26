@@ -52,27 +52,29 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-08-26T10:27:27.558Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.9 MB (beats 38.09%)  
+**Submitted:** 2026-08-26T10:28:37.996Z  
 
 ```java
-        while(low<high){
-            int mid = low + (high - low) /2;
-        }
+class Solution {
+    public int findMin(int[] nums) {
+        int low = 0;
+        int high = nums.length-1;
 
-            if(nums[low]> nums[high]){
-                low = mid + 1;
-            }else{
-                high = mid;
-            }
+        while(low<high){
+            int mid = low + (high - low) /2;
 
-        int high = nums.length-1;
+            if(nums[mid]> nums[high]){
+                low = mid + 1;
+            }else{
+                high = mid;
+            }
+        }
 
-        int low = 0;
-    public int findMin(int[] nums) {
-class Solution {
-
+        return nums[low];
+    }
+}
 ```
 
 ---
