@@ -2,7 +2,7 @@
             int mid = low + (high - low) /2;
         }
 
-            if(nums[low]> nums[mid]){
+            if(nums[low]> nums[high]){
                 low = mid + 1;
             }else{
                 high = mid;
@@ -10,5 +10,6 @@
 
         int high = nums.length-1;
 
-        return nums[low];
-    }
+        int low = 0;
+    public int findMin(int[] nums) {
+class Solution {
