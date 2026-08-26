@@ -52,22 +52,30 @@ It is not required to do the modifications in-place.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 43.1 MB  
-**Submitted:** 2026-08-26T09:50:03.137Z  
+**Runtime:** 3 ms (beats 100.00%)  
+**Memory:** 175.5 MB (beats 57.85%)  
+**Submitted:** 2026-08-26T09:50:08.800Z  
 
 ```java
-                ans[pos] = nums[i];
-            }else{
-                pos +=2;
-                ans[neg] = nums[i];
-                neg += 2;
-            }
-        }
-        return ans;
-    }
-}
+class Solution {
+    public int[] rearrangeArray(int[] nums) {
+        int ans[] = new int[nums.length];
 
+        int pos = 0;
+        int neg = 1;
+
+        for(int i=0;i<nums.length;i++){
+            if(nums[i] > 0){
+                ans[pos] = nums[i];
+                pos +=2;
+            }else{
+                ans[neg] = nums[i];
+                neg += 2;
+            }
+        }
+        return ans;
+    }
+}
 ```
 
 ---
