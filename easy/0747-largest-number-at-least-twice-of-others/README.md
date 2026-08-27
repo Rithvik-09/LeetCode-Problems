@@ -36,23 +36,33 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-08-27T12:21:22.163Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.5 MB (beats 20.42%)  
+**Submitted:** 2026-08-27T12:21:30.231Z  
 
 ```java
-        }   
-            }else if(nums[i]>secondLargest){
-                secondLargest = nums[i];
-            }
+class Solution {
+    public int dominantIndex(int[] nums) {
+        int largest = -1;
+        int secondLargest = -1;
+        int ind = -1;
 
-        if(largest >= 2* secondLargest){
-            return ind;
-        } 
-        return -1;
-    }
+        for(int i =0;i<nums.length;i++){
+            if(nums[i] >largest){
+                secondLargest = largest;
+                largest = nums[i];
+                ind = i;
+            }else if(nums[i]>secondLargest){
+                secondLargest = nums[i];
+            }
+        }   
+
+        if(largest >= 2* secondLargest){
+            return ind;
+        } 
+        return -1;
+    }
 }
-
 ```
 
 ---
