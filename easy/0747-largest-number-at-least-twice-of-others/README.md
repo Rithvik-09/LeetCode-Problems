@@ -37,8 +37,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-08-27T12:21:08.697Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-08-27T12:21:22.163Z  
 
 ```java
         }   
@@ -46,7 +46,7 @@ Constraints:
                 secondLargest = nums[i];
             }
 
-        if(largest > 2* secondLargest){
+        if(largest >= 2* secondLargest){
             return ind;
         } 
         return -1;
