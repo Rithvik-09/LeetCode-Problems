@@ -43,24 +43,23 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.8 MB  
-**Submitted:** 2026-08-28T05:03:38.521Z  
+**Runtime:** 10 ms (beats 26.60%)  
+**Memory:** 41.8 MB (beats 85.57%)  
+**Submitted:** 2026-08-28T05:04:15.564Z  
 
 ```java
-class Solution {
-    public int fib(int n) {
-        if(n == 0){
-            return 0;
-        }
-        if(n == 1){
-            return 1;
-        }
-    }
+class Solution {
+    public int fib(int n) {
+        if(n == 0){
+            return 0;
+        }
+        if(n == 1){
+            return 1;
+        }
 
-        return fib(n-1)+ fib(n-2);
+        return fib(n-1)+ fib(n-2);
+    }
 }
-
 ```
 
 ---
