@@ -1,23 +1,20 @@
 class Solution {
-    public int minBishopMoves(int[] source, int[] target) {
-        int sr = source[0];
-        int sc = source[1];
+    public String[] largestString(int[] nums) {
+        String[] ans = new String[nums.length];
 
-        int tr = target[0];
-        int tc = target[1];
+        for(int i=0;i<nums.length;i++){
+            int x = nums[i];
 
-        if(sr == tr && sc == tc){
-            return 0;
+            StringBuilder sb = new StringBuilder();
+
+            for(int bit = 30;bit >=0;bit--){
+                if((x &(1 << bit)) != 0){
+                    sb.append((char)('a' + bit));
+                }
+            }
+
+            ans[i] = sb.toString();
         }
-
-        if(Math.abs(sr-tr) == Math.abs(sc-tc)){
-            return 1;
-        }
-
-        if((sr+sc)%2 == (tr + tc)%2){
-            return 2;
-        }
-
-        return -1;
+        return ans;
     }
 }
