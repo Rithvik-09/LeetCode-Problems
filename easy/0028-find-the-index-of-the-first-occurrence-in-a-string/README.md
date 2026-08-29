@@ -33,23 +33,22 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-29T12:49:13.125Z  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-08-29T12:50:26.821Z  
 
 ```java
-class Solution {
-    public int strStr(String haystack, String needle) {
-        int n = needle.length();
+class Solution {
+    public int strStr(String haystack, String needle) {
+        int n = needle.length();
 
-        for(int i=0;i<haystack.length();i++){
-            if(haystack.substring(0,n).equals(needle)){
-                return i;
-            }
-        }
-    }
-        return -1;
+        for(int i=0;i<haystack.length();i++){
+            if(haystack.substring(0,n).equals(needle)){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
-
 ```
 
 ---
