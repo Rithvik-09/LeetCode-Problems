@@ -1,0 +1,1 @@
+source.length == target.length == 2
