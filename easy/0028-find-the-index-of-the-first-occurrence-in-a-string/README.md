@@ -32,17 +32,17 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-08-29T12:50:26.821Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.3 MB (beats 18.42%)  
+**Submitted:** 2026-08-29T12:50:31.874Z  
 
 ```java
 class Solution {
     public int strStr(String haystack, String needle) {
         int n = needle.length();
 
-        for(int i=0;i<haystack.length();i++){
-            if(haystack.substring(0,n).equals(needle)){
+        for(int i=0;i<=haystack.length() - n;i++){
+            if(haystack.substring(i,i+n).equals(needle)){
                 return i;
             }
         }
