@@ -30,26 +30,47 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-08-31T14:12:25.141Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 44.2 MB (beats 62.99%)  
+**Submitted:** 2026-08-31T14:12:30.852Z  
 
 ```java
+class Solution {
+    public ListNode rotateRight(ListNode head, int k) {
 
-        if (k == 0) {
-            return head;
-        }
+        if (head == null || head.next == null || k == 0) {
+            return head;
+        }
 
-        tail.next = head;
+        int n = 1;
+        ListNode tail = head;
 
-        int nth = n - k - 1;
-        ListNode last = head;
+        while (tail.next != null) {
+            tail = tail.next;
+            n++;
+        }
 
-        for (int i = 0; i < nth; i++) {
-            last = last.next;
-        }
+        k = k % n;
 
+        if (k == 0) {
+            return head;
+        }
 
+        tail.next = head;
+
+        int nth = n - k - 1;
+        ListNode last = head;
+
+        for (int i = 0; i < nth; i++) {
+            last = last.next;
+        }
+
+        ListNode newHead = last.next;
+        last.next = null;
+
+        return newHead;
+    }
+}
 ```
 
 ---
