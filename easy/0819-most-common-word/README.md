@@ -42,25 +42,26 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
+**Runtime:** 1 ms  
 **Memory:** 42.7 MB  
-**Submitted:** 2026-09-01T13:00:58.347Z  
+**Submitted:** 2026-09-01T13:01:30.949Z  
 
 ```java
-            if(!ban.contains(s)){
 
-        for(String s : str){
-        for(String b : banned){
-            ban.add(b);
+        for (String word : hm.keySet()) {
+            if (answer.equals("") || hm.get(word) > hm.get(answer)) {
+                answer = word;
+
+        String answer = "";
         }
-        Set<String> ban = new HashSet<>();
+                hm.put(s, hm.getOrDefault(s, 0) + 1);
+            }
 
-
-        HashMap<String,Integer> hm = new HashMap<>();
-
-        String str[] = paragraph.split(" ");
-    public String mostCommonWord(String paragraph, String[] banned) {
-class Solution {
+        for (String s : str) {
+            if (!ban.contains(s)) {
+        }
+            ban.add(b.toLowerCase());
+        for (String b : banned) {
 
 ```
 
