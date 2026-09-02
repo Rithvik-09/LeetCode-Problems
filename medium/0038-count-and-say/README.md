@@ -57,26 +57,38 @@ Follow up: Could you solve it iteratively?
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-09-02T17:29:49.798Z  
+**Runtime:** 8 ms (beats 61.03%)  
+**Memory:** 42.5 MB (beats 98.96%)  
+**Submitted:** 2026-09-02T17:29:54.961Z  
 
 ```java
-            StringBuilder current = new StringBuilder();
-            int count = 1;
+class Solution {
+    public String countAndSay(int n) {
+        String result = "1";
 
-            for (int j = 1; j < result.length(); j++) {
-                if (result.charAt(j) == result.charAt(j - 1)) {
-                    count++;
-                } else {
-                    current.append(count);
-                    current.append(result.charAt(j - 1));
-                    count = 1;
-                }
-            }
+        for (int i = 2; i <= n; i++) {
+            StringBuilder current = new StringBuilder();
+            int count = 1;
 
-            current.append(count);
+            for (int j = 1; j < result.length(); j++) {
+                if (result.charAt(j) == result.charAt(j - 1)) {
+                    count++;
+                } else {
+                    current.append(count);
+                    current.append(result.charAt(j - 1));
+                    count = 1;
+                }
+            }
 
+            current.append(count);
+            current.append(result.charAt(result.length() - 1));
+
+            result = current.toString();
+        }
+
+        return result;
+    }
+}
 ```
 
 ---
