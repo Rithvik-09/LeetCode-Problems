@@ -32,23 +32,24 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.3 MB (beats 18.42%)  
-**Submitted:** 2026-08-29T12:50:31.874Z  
+**Runtime:** 0 ms  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-09-05T12:11:25.825Z  
 
 ```java
-class Solution {
-    public int strStr(String haystack, String needle) {
-        int n = needle.length();
+class Solution {
+    public int strStr(String haystack, String needle) {
+        int n = needle.length();
 
-        for(int i=0;i<=haystack.length() - n;i++){
-            if(haystack.substring(i,i+n).equals(needle)){
-                return i;
-            }
-        }
-        return -1;
-    }
+        for(int i=0;i<=haystack.length() - n;i++){
+            if(haystack.substring(i,i+n).equals(needle)){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
+
 ```
 
 ---
