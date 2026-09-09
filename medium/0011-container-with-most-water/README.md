@@ -37,26 +37,34 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-09T18:12:26.029Z  
+**Runtime:** 5 ms (beats 82.96%)  
+**Memory:** 77.4 MB (beats 49.05%)  
+**Submitted:** 2026-09-09T18:12:32.667Z  
 
 ```java
-class Solution {
-    public int maxArea(int[] height) {
-        int l =0,r= height.length-1;
-        int marea = 0;
+class Solution {
+    public int maxArea(int[] height) {
+        int l =0,r= height.length-1;
+        int marea = 0;
 
-        while(l<r){
-            int width = r - l;
-            int h = Math.min(height[l],height[r]);
+        while(l<r){
+            int width = r - l;
+            int h = Math.min(height[l],height[r]);
 
-            int area = width * h;
+            int area = width * h;
 
-            if(height[l]<=height[r]){
-                l++;
-            }else{
+            if(height[l]<=height[r]){
+                l++;
+            }else{
+                r--;
+            }
 
+            marea = Math.max(marea,area);
+        }
+
+        return marea;
+    }
+}
 ```
 
 ---
