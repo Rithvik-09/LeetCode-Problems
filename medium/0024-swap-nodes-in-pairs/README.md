@@ -53,26 +53,44 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-10T15:37:22.228Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.2 MB (beats 28.91%)  
+**Submitted:** 2026-09-10T15:37:28.661Z  
 
 ```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode swapPairs(ListNode head) {
+        ListNode dummy = new ListNode(0);
 
-            first.next = second.next;
-            second.next = first;
-            prev.next = second;
+        dummy.next = head;
 
-            prev = first;
-        }
-        
+        ListNode prev = dummy;
 
-        return dummy.next;
-    }
+        while(prev.next != null && prev.next.next != null){
+            ListNode first = prev.next;
+            ListNode second = prev.next.next;
+
+            first.next = second.next;
+            second.next = first;
+            prev.next = second;
+
+            prev = first;
+        }
+        
+
+        return dummy.next;
+    }
 }
-            ListNode second = prev.next.next;
-            ListNode first = prev.next;
-
 ```
 
 ---
