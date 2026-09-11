@@ -65,25 +65,36 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-09-11T11:51:44.638Z  
+**Runtime:** 4 ms (beats 36.32%)  
+**Memory:** 43.2 MB (beats 57.10%)  
+**Submitted:** 2026-09-11T11:52:04.984Z  
 
 ```java
-                    return false;
-                }
-                char open = st.peek();
-                if((ch == ')' && open != '(') || (ch == '}' && open != '{') || (ch == ']' && 
-                open != '[')){
-                    return false;
-                }
-                st.pop();
-            }
-        }
-                return st.isEmpty();
-    }
-}
+import java.util.*;
 
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> st = new Stack<>();
+
+        for(int i = 0;i<s.length();i++){
+            char ch = s.charAt(i);
+
+            if(ch == '(' || ch =='{' || ch == '['){
+                st.push(ch);
+            }else{
+                if(st.isEmpty()){
+                    return false;
+                }
+                char open = st.peek();
+                if((ch == ')' && open != '(') || (ch == '}' && open != '{') || (ch == ']' && open != '[')){
+                    return false;
+                }
+                st.pop();
+            }
+        }
+                return st.isEmpty();
+    }
+}
 ```
 
 ---
