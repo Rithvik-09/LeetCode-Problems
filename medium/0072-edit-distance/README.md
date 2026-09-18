@@ -51,8 +51,8 @@ exection -> execution (insert 'u')
 
 **Language:** Java  
 **Runtime:** 5 ms (beats 65.82%)  
-**Memory:** 47.1 MB (beats 52.26%)  
-**Submitted:** 2026-09-18T12:19:46.141Z  
+**Memory:** 46.9 MB (beats 82.65%)  
+**Submitted:** 2026-09-18T12:20:15.613Z  
 
 ```java
 class Solution {
