@@ -38,9 +38,9 @@ Output: "acdb"
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 79.29%)  
-**Memory:** 43.9 MB (beats 41.43%)  
-**Submitted:** 2026-09-29T16:14:54.007Z  
+**Runtime:** 2 ms (beats 78.59%)  
+**Memory:** 43.9 MB (beats 41.14%)  
+**Submitted:** 2026-10-02T15:53:25.769Z  
 
 ```java
 import java.util.*;
