@@ -42,9 +42,9 @@ Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 22 ms (beats 13.28%)  
-**Memory:** 49 MB (beats 32.30%)  
-**Submitted:** 2026-09-24T14:06:40.746Z  
+**Runtime:** 22 ms (beats 5.07%)  
+**Memory:** 48.8 MB (beats 70.87%)  
+**Submitted:** 2026-10-05T16:13:47.881Z  
 
 ```java
 class Solution {
